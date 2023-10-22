@@ -44,14 +44,13 @@ def get_country_id_query(geom_dump):
                         ST_Intersects(ST_GEOMFROMGEOJSON('{geom_dump}') ,
                         b.geometry)
                     order by ST_Area(ST_Intersection(b.geometry,ST_MakeValid(ST_GEOMFROMGEOJSON('{geom_dump}')))) desc
-
                     """
     return base_query
 
 
 def check_exisiting_country(geom):
     query = f"""select
-                        b.cid::int as fid
+                    b.cid::int as fid
                     from
                         countries b
                     where

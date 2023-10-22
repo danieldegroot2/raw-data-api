@@ -220,3 +220,8 @@ WantedBy=timers.target
 $ sudo systemctl enable raw-data-backend.timer
 $ sudo systemctl daemon-reload
 ```
+
+### Reserve country id : cid
+
+1000 - Non intersected rows with the boundaries
+0 - Default value 
